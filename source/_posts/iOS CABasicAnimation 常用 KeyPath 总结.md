@@ -1,7 +1,7 @@
 ---
 title: iOS CABasicAnimation 常用 KeyPath 总结
 date: 2021-11-15 11:05:44
-tags:
+tags: Swift
 ---
 
 | KeyPath               | 功能 | KeyPath               | 功能 |

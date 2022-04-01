@@ -1,7 +1,7 @@
 ---
 title: iOS 设置手机常亮
 date: 2021-06-10 10:48:34
-tags:
+tags: Swift
 ---
 
 使用 UIApplication 中的 idleTimerDisabled 属性来设置手机常亮，代码如下：
