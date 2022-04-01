@@ -5,6 +5,7 @@ style: white
 favicon: /favicon.ico
 
 menu:
+  标签: /tag
   作品: /project
   关于: /about
   Github: https://github.com/CouchNut
