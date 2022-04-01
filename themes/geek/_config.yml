@@ -1,0 +1,20 @@
+logo_title: CouchNut
+
+style: white
+
+favicon: /favicon.ico
+
+menu:
+  作品: /project
+  关于: /about
+  Github: https://github.com/CouchNut
+
+# 做了域名限制，请改成自己的 KEY
+# 若关闭valine 设置enable为false
+valine:
+  enable: true
+  appId: 9B7dB79sVgwoY5XIperOHqqc-gzGzoHsz
+  appKey: UdQUYW8DQ7lVnkMTQXhcmi4u
+
+highlight:
+  enable: false
