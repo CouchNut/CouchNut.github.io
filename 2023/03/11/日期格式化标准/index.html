@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        CouchNut
+    </title>
+    
+<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            日期格式化标准
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <table>
+<thead>
+<tr>
+<th>字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(:)</td>
+<td>时间分隔符。在某些区域设置中，可以使用其他字符表示时间分隔符。时间分隔符在格式化时间值时分隔小时、分钟和秒。格式化输出中用作时间分隔符的实际字符由您的应用程序的当前区域性值确定。</td>
+</tr>
+<tr>
+<td>(&#x2F;)</td>
+<td>日期分隔符。在某些区域设置中，可以使用其他字符表示日期分隔符。日期分隔符在格式化日期值时分隔日、月和年。格式化输出中用作日期分隔符的实际字符由您的应用程序的当前区域性确定。</td>
+</tr>
+<tr>
+<td>(%)</td>
+<td>用于表明不论尾随什么字母，随后字符都应该以单字母格式读取。也用于表明单字母格式应以用户定义格式读取。有关更多详细信息，请参见下面的内容。</td>
+</tr>
+<tr>
+<td>d</td>
+<td>将日显示为不带前导零的数字（如 1）。如果这是用户定义的数字格式中的唯一字符，请使用 %d。</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>将日显示为带前导零的数字（如 01）。</td>
+</tr>
+<tr>
+<td>EEE</td>
+<td>将日显示为缩写形式（例如 Sun）。</td>
+</tr>
+<tr>
+<td>EEEE</td>
+<td>将日显示为全名（例如 Sunday）。</td>
+</tr>
+<tr>
+<td>M</td>
+<td>将月份显示为不带前导零的数字（如一月表示为 1）。如果这是用户定义的数字格式中的唯一字符，请使用 %M。</td>
+</tr>
+<tr>
+<td>MM</td>
+<td>将月份显示为带前导零的数字（例如 01&#x2F;12&#x2F;01）。</td>
+</tr>
+<tr>
+<td>MMM</td>
+<td>将月份显示为缩写形式（例如 Jan）。</td>
+</tr>
+<tr>
+<td>MMMM</td>
+<td>将月份显示为完整月份名（例如 January）。</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>显示时代&#x2F;纪元字符串（例如 A.D.）</td>
+</tr>
+<tr>
+<td>h</td>
+<td>使用 12 小时制将小时显示为不带前导零的数字（例如 1:15:15 PM）。如果这是用户定义的数字格式中的唯一字符，请使用 %h。</td>
+</tr>
+<tr>
+<td>hh</td>
+<td>使用 12 小时制将小时显示为带前导零的数字（例如 01:15:15 PM）。</td>
+</tr>
+<tr>
+<td>H</td>
+<td>使用 24 小时制将小时显示为不带前导零的数字（例如 1:15:15）。如果这是用户定义的数字格式中的唯一字符，请使用 %H。</td>
+</tr>
+<tr>
+<td>HH</td>
+<td>使用 24 小时制将小时显示为带前导零的数字（例如 01:15:15）。</td>
+</tr>
+<tr>
+<td>m</td>
+<td>将分钟显示为不带前导零的数字（例如 12:1:15）。如果这是用户定义的数字格式中的唯一字符，请使用 %m。</td>
+</tr>
+<tr>
+<td>mm</td>
+<td>将分钟显示为带前导零的数字（例如 12:01:15）。</td>
+</tr>
+<tr>
+<td>s</td>
+<td>将秒显示为不带前导零的数字（例如 12:15:5）。如果这是用户定义的数字格式中的唯一字符，请使用 %s。</td>
+</tr>
+<tr>
+<td>ss</td>
+<td>将秒显示为带前导零的数字（例如 12:15:05）。</td>
+</tr>
+<tr>
+<td>f</td>
+<td>显示秒的小数部分。例如，ff 将精确显示到百分之一秒，而 ffff 将精确显示到万分之一秒。用户定义格式中最多可使用七个 f 符号。如果这是用户定义的数字格式中的唯一字符，请使用 %f。</td>
+</tr>
+<tr>
+<td>t</td>
+<td>使用 12 小时制，并对中午之前的任一小时显示大写的 A，对中午到 11:59 P.M 之间的任一小时显示大写的 P。如果这是用户定义的数字格式中的唯一字符，请使用 %t。</td>
+</tr>
+<tr>
+<td>tt</td>
+<td>对于使用 12 小时制的区域设置，对中午之前任一小时显示大写的 AM，对中午到 11:59 P.M 之间的任一小时显示大写的 PM。对于使用 24 小时制的区域设置，不显示任何字符。</td>
+</tr>
+<tr>
+<td>y</td>
+<td>将年份 (0-9) 显示为不带前导零的数字。如果这是用户定义的数字格式中的唯一字符，请使用 %y。</td>
+</tr>
+<tr>
+<td>yy</td>
+<td>以带前导零的两位数字格式显示年份（如果适用）。</td>
+</tr>
+<tr>
+<td>yyy</td>
+<td>以四位数字格式显示年份。</td>
+</tr>
+<tr>
+<td>yyyy</td>
+<td>以四位数字格式显示年份。</td>
+</tr>
+<tr>
+<td>z</td>
+<td>显示不带前导零的时区偏移量（如 -8）。如果这是用户定义的数字格式中的唯一字符，请使用 %z。</td>
+</tr>
+<tr>
+<td>zz</td>
+<td>显示带前导零的时区偏移量（例如 -08）</td>
+</tr>
+<tr>
+<td>zzz</td>
+<td>显示完整的时区偏移量（例如 -08:00）</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+        <hr class="fhr">
+        <div id="vcomments"></div>
+    
+</div>
+    <div class="footer" id="footer">
+    <p>Copyright © 2020 <a class="flink" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>-<a class="flink" target="_blank" rel="noopener" href="https://github.com/sanjinhub/hexo-theme-geek">Geek</a>.
+        <label class="el-switch el-switch-green el-switch-sm" style="vertical-align: sub;">
+            <input type="checkbox" name="switch" id="update_style">
+            <span class="el-switch-style"></span>
+        </label>
+<!--         <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+        </script> -->
+    </p>
+</div>
+<input type="hidden" id="web_style" value="white">
+<input type="hidden" id="valine_appid" value="9B7dB79sVgwoY5XIperOHqqc-gzGzoHsz">
+<input type="hidden" id="valine_appKey" value="UdQUYW8DQ7lVnkMTQXhcmi4u">
+
+<script src="/libs/jquery.min.js"></script>
+
+
+<script src="/libs/highlight/highlight.pack.js"></script>
+
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+
+<script src="/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+    color: #698fca;
+}
+
+.v .vlist .vcard .vhead .vsys {
+    color: #3a3e4a;
+}
+
+.v .vlist .vcard .vh .vmeta .vat {
+    color: #638fd5;
+}
+
+.v .vlist .vcard .vhead .vnick {
+    color: #6ba1ff;
+}
+
+.v a {
+    color: #8696b1;
+}
+
+.v .vlist .vcard .vhead .vnick:hover {
+    color: #669bfc;
+}
+</style>
+</body>
+
+</html>
